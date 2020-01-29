@@ -1,13 +1,14 @@
 import React from 'react'
-class Test extends React.Component{
+
+class App extends React.Component{
     
     render(){
         console.log("dkdkkdk")
         return(
             <div>
-                <h1>jfjjfjf</h1>
+                <h1>lamnn8</h1>
             </div>
         )
     }
 }
-export default Test
+export default App
