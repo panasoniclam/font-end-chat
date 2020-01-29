@@ -1,6 +1,6 @@
 var path = require('path');
 var hwp = require('html-webpack-plugin');
-
+const webpack = require('webpack')
 module.exports = {
     entry: path.join(__dirname, '/src/index.js'),
     output: {
@@ -18,6 +18,7 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
         new hwp({ template: path.join(__dirname, '/src/index.html') })
     ]
 }

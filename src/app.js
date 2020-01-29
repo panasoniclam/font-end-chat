@@ -4,11 +4,12 @@ import Test from './components/index'
 import { createStore ,applyMiddleware} from 'redux'
 import myReducer from  './reducers/index'
 import { Provider } from 'react-redux'
-import rootSaga from  './sagas/index'
+import  rootSaga from  './sagas'
 import createSagaMiddleware from 'redux-saga'
+
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(myReducer,applyMiddleware(sagaMiddleware))
-sagaMiddleware.run(rootSaga)
+ sagaMiddleware.run(rootSaga)
 class App extends React.Component {
      
     render() {

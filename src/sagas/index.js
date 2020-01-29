@@ -1,11 +1,11 @@
 import { call, put, takeEvery, takeLatest } from 'redux-saga/effects'
 import * as TYPE from './../contands/index'
-function *startSaga(){
+export function* startSaga(){
     console.log('hello saga')
 }
-function *  watchSaga(){
-    yield  takeEvery(TYPE.TEST,startSaga )
-   
+console.log("lplppl")
+export default function* rootSaga(){
+    yield  takeEvery(TYPE.TEST,startSaga)
 }
 
-export   {watchSaga}
+ 
