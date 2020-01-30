@@ -6,7 +6,7 @@ export function* startSaga(){
  
 export default function* rootSaga(){
     yield  takeEvery(TYPE.TEST,startSaga)
- 
+    
 }
 
  
