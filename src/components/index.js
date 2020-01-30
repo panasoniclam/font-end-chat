@@ -1,6 +1,7 @@
 import React from  'react'
 import { connect } from 'react-redux'
 import  {actionTest} from  './../actions/index'
+import {Avatar, Drawer,Button, Input, Spin, Tabs} from "antd";
  class Test extends React.Component {
      constructor(props){
          super(props)
@@ -15,7 +16,7 @@ import  {actionTest} from  './../actions/index'
      }
      handleState(){
         this.componentWillReceiveProps()
-        // console.log(this.state.data)
+       
      }
      componentWillReceiveProps  () {
        this.setState({
@@ -28,6 +29,7 @@ import  {actionTest} from  './../actions/index'
                 <h1>{this.props.lam}</h1>
                 <button  onClick={this.handleChange } >ccc</button>
                 <button onClick={this.handleState}>thay doi state</button>
+                 <div  className="test"></div>
              </div>
          )
      }
