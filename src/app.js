@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import  rootSaga from  './sagas'
 import createSagaMiddleware from 'redux-saga'
 import setupSockets from  './sockets/index'
-// import  './styles/styles.less'
+import  './styles/styles.less'
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(myReducer,applyMiddleware(sagaMiddleware))
 const socket  = setupSockets(store.dispatch)

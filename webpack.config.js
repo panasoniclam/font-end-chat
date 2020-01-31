@@ -1,6 +1,6 @@
 var path = require('path');
 var hwp = require('html-webpack-plugin');
- 
+
 module.exports = {
     entry: path.join(__dirname, '/src/index.js'),
     output: {
@@ -22,11 +22,18 @@ module.exports = {
                 'style-loader',
                 'css-loader'
             ],
-        }
+        },
+        {
+            test: /\.less$/,
+            exclude: /node_modules/,
+            loader:["style-loader","css-loader","less-loader"]
+            
+
+        },
         ]
     },
     plugins: [
-        
+
         new hwp({ template: path.join(__dirname, '/src/index.html') })
     ]
 }
