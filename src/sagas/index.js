@@ -16,7 +16,7 @@ function * helloSaga( ){
     console.log("hello saga")
 }
 function * testSaga(){
-   yield console.log("test saga")
+   yield console.log("run saga")
 }
 export default function* rootSaga(){
     yield  takeEvery(TYPE.TEST,testSaga)
